@@ -7,3 +7,4 @@ const isInViewport = function () {
 }
 
 document.addEventListener('scroll', isInViewport);
+
