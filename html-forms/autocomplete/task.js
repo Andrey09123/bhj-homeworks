@@ -69,23 +69,12 @@ class Autocomplete {
 
   getMatches( text ) {
     let result = [];
-        let options = Array.from(this.input.options);
-
-        options.forEach(el => {
-            if (el.text.toLowerCase().includes(text.toLowerCase())) {
-                result.push({
-                    text: el.text,
-                    value: el.value
-                });
-            }
-
-        });
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
+    for (let i = 0; i < this.input.options.length; i++) {
+      if (this.input.options[i].text.includes(text)) {
+        result.push({text: this.input.options[i].text, value: this.input.options[i].value});
       }
-    ];
+    }
+    return result;
   }
 }
 

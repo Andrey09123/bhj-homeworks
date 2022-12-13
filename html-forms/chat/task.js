@@ -34,7 +34,7 @@ chatWidget.addEventListener('keydown', (e) => {
                             <div class="message__time"> ${getTime()}</div>
                             <div class="message__text">${randomBotMessages()}</div>
                         </div>`;
-        chatWidget.value = '';
+        chatWidgetInput.value = '';
         scrollDown();
         clearTimeout(timerId);
         timerId = setTimeout(refreshmentMessageBot, 5000); 
